@@ -259,13 +259,16 @@ Why is it more difficult to reason about space complexity of Haskell code than S
 
 [Assignment-2](./hw2.hs)
 
-[Assignment-3](./hw3.txt)
+[Final-Exam](./hw3.txt)
 
 ```
 Uncomplete parts in answers include
 
 1. Assignment-2/Extra Credit
 2. Assignment-3/Q5
+
+ps: 
+    The file named lambda_calculus is for the Assignment-2/Test Case, which is a process that I manually obtain the result step by step.
 ```
 
 ## Helpful Resources
