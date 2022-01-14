@@ -9,7 +9,6 @@ All questions here is about the course of Programming Language Desigen & Semanti
 * Anwsers
 * Useful resources
 
-
 ## Assignment 1 for Scheme
 
 The objective of this assignment is to write some Scheme code in order to become somewhat proficient in “Pure Core Scheme”. 
@@ -26,7 +25,7 @@ Define `before-seq`, a function which takes two lists, a target list `xs` and li
 
 Examples:
 
-```
+```scheme
 > (before-seq '(a b) '(x y z a b 1 2 3 4 a b c d a a b))
 (z 4 a)
 > (before-seq '(a b) '(a b c d))
@@ -48,7 +47,7 @@ For example, you might want to not return something containing a subexpression l
 
 Convert the following definition to CPS, i.e., define `cf`, using the notational conventions in the CPS lecture.
 
-```
+```scheme
 (define f
   (λ (n)
     (cond ((= n 0) 1)
@@ -63,7 +62,7 @@ The special forms `and` and `or` in Scheme are left-to-right short-circuiting, r
 The transformation is not always unique. For that reason, the following examples are meant to be expository.
 
 Examples:
-```
+```scheme
 > (expand-or '(or ONE))
 ONE
 > (expand-or '(or))
@@ -85,7 +84,7 @@ ONE
 Define `grovel-add` which takes two arguments, a filter function `p?` and an s-expression `s` and returns the sum of all atoms (leaves) nested within `s` that are numbers and also pass `p?`.
 
 Examples:
-```
+```scheme
 > (grovel-add (λ (x) #t) '(a b (5 x y (z 2))))
 7
 > (grovel-add (λ (x) (< x 4)) '(a b (5 x y (z 2))))
@@ -157,7 +156,7 @@ which de-sugars a sugared lambda calculus term.
 
 ### Test Case
 use this machinery to reduce
-```
+```scheme
 (λ t . (λ m n . n (λ n f x . n f (f x)) m) ((λ n . (λ m n f . m (n f)) n n) ((λ n . (λ m n f . m (n f)) n n) t)) ((λ n . (λ m n f . m (n f)) n n) t)) ((λ m n . n (λ n f x . n f (f x)) m) ((λ m n f . m (n f)) (λ f x . x) ((λ m n . n (λ n f x . n f (f x)) m) ((λ n f x . n f (f x)) (λ f x . x)) ((λ n f x . n f (f x)) (λ f x . x)))) ((λ n f x . n f (f x)) ((λ n f x . n f (f x)) (λ f x . x))))
 ```
 to normal form.
@@ -183,9 +182,7 @@ which sweetens a term, syntactically. Note that it should *not* include any appl
 
 ### Q1: Scheme
 
-Define a Scheme function maj3-filter which takes three predicates
-and a list, and returns all elements of the list for which at least
-two of the three passed predicates are true.
+Define a Scheme function maj3-filter which takes three predicates and a list, and returns all elements of the list for which at least two of the three passed predicates are true.
 
 Example:
 ```scheme
@@ -200,34 +197,27 @@ Consider the following term in the pure lambda calculus term E:
 ```scheme
 (λ a . (λ b . b)) ((λ x . x x) (λ y . y y)) (λ z . d)
 ```
-(a) show that it is possible to have an infinite chain of reductions
-    starting with E.
+(a) show that it is possible to have an infinite chain of reductions starting with E.
 
 (b) reduce E to normal form, showing your work.
 
-(c) give two reasons why E cannot be well typed in the simply typed
-    lambda calculus.
+(c) give two reasons why E cannot be well typed in the simply typed lambda calculus.
 
-(d) show that when E is reduced to a normal form, that term *can* be
-    well typed in the simply typed lambda calculus..
+(d) show that when E is reduced to a normal form, that term *can* be well typed in the simply typed lambda calculus..
 
 ### Q3: Haskell
 
-Define a Haskell function maj3filter which takes three predicates and
-a list and returns a list of those elements for which at least two of
-the predicates are true. Be sure to include a type signature!
+Define a Haskell function maj3filter which takes three predicates and a list and returns a list of those elements for which at least two of the predicates are true. Be sure to include a type signature!
 
 Example:
-```scheme
+```haskell
 maj3filter (>0) even (==7) [-2..10]
 
 => [2,4,6,7,8,10]
 ```
 ### Q4: Prolog
 
-Define a Prolog predicate mushed/3 which is true when given three
-lists the third of third of which is some interdigitation of the first
-two.
+Define a Prolog predicate mushed/3 which is true when given three lists the third of third of which is some interdigitation of the first two.
 
 Example:
 ```prolog
@@ -262,9 +252,7 @@ no
 
 ### Q5: Synthesis
 
-Why is it more difficult to reason about space complexity of Haskell
-code than Scheme code? Where does Prolog fall in this continuum, and
-why?
+Why is it more difficult to reason about space complexity of Haskell code than Scheme code? Where does Prolog fall in this continuum, and why?
 
 ## Anwsers
 [Assignment-1](./hw1.scm)
