@@ -262,7 +262,7 @@ Why is it more difficult to reason about space complexity of Haskell code than S
 [Final-Exam](./hw3.txt)
 
 ```
-Uncomplete parts in answers include
+Incomplete parts in answers include
 
 1. Assignment-2/Extra Credit
 2. Assignment-3/Q5
