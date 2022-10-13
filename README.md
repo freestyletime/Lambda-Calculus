@@ -1,5 +1,5 @@
 # Lambda-Calculus
-All questions here is about the course of Programming Language Desigen & Semantic(CS424), I wish it would be helpful for you.
+All questions here are about the course of Programming Language Desigen & Semantic(CS424), I wish it would be helpful for you.
 
 ## Overview
 
